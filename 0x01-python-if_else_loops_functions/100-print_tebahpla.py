@@ -2,6 +2,7 @@
 
 for char in range(122, 96, -1):
     if char % 2 == 0:
-        print(chr(char), end="")
+        char = chr(char)
     else:
-        print(chr(char - 32), end="")
+        char = chr(char - 32)
+    print(char, end="")
