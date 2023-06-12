@@ -3,8 +3,8 @@
 def no_c(my_string):
     new_string = ""
 
-    for i in range(len(my_string)):
-        if my_string[i] = 'c' or my_string[i] = 'C':
-            new_string[i] = new_string[i + 1]
+    for c in my_string:
+        if c == 'c' or c == 'C':
+            new_string = new_string + c
 
     return new_string
