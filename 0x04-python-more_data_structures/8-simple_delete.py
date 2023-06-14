@@ -2,4 +2,6 @@
 
 def simple_delete(a_dictionary, key=""):
     if key in a_dictionary.keys():
-        del a_dictionary[key]
+        a_dictionary[key].pop()
+
+    return a_dictionary
