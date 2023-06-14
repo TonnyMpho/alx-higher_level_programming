@@ -13,7 +13,7 @@ def roman_to_int(roman_string):
         n = roman_values.get(i, 0)
 
         if n < value:
-            num += n
+            num -= n
         else:
             num += n
             value = n
