@@ -60,7 +60,7 @@ void print_python_bytes(PyObject *p)
 	for (i = 0; i < (size > 10 ? 10 : size + 1); i++)
 	{
 		printf("%02hhx", bytes[i]);
-		if (i == ((size > 10) ? size : size - 1))
+		if (i == ((size > 10) ? 9 : size - 1))
 			printf("\n");
 		else
 			printf(" ");
