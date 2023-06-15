@@ -55,9 +55,9 @@ void print_python_bytes(PyObject *p)
 	printf("  size: %ld\n", size);
 	printf("  trying string: %s\n", bytes);
 
-	printf("  first %ld bytes: ", size > 10 ? 10 : size + 1);
+	printf("  first %ld bytes: ", size >= 10 ? 10 : size + 1);
 
-	for (i = 0; i < (size > 10 ? 10 : size + 1); i++)
+	for (i = 0; i < (size >= 10 ? 10 : size + 1); i++)
 	{
 		printf("%02hhx", bytes[i]);
 		if (i == ((size > 10) ? 9 : size - 1))
