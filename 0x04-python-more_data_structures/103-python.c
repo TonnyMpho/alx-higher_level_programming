@@ -13,7 +13,7 @@ void print_python_list(PyObject *p)
 	PyListObject *list = (PyListObject *)p;
 	PyObject *item;
 
-	size = PyObject_Length(p);
+	size = ((PyVarObject *)p)->ob_size;
 
 	printf("[*] Python list info\n");
 	printf("[*] Size of the Python List = %d\n", size);
@@ -21,9 +21,9 @@ void print_python_list(PyObject *p)
 
 	for (i = 0; i < size; i++)
 	{
-		item = list->ob_item[i]->on_type->tp_name;
+		item = ((PyListObject *)p)->ob_item[i];
 
-		printf("Element %d: %s\n", i, item);
+		printf("Element %d: %s\n", i, item->ob_type->tp_name);
 		if (PyBytes_Check(item))
 			print_python_bytes(item);
 	}
@@ -40,7 +40,7 @@ void print_python_bytes(PyObject *p)
 	size_t size, i;
 	char *bytes;
 
-	printf("[.}] bytes object info\n");
+	printf("[.] bytes object info\n");
 
 	if (!PyBytes_Check(p))
 	{
@@ -48,11 +48,11 @@ void print_python_bytes(PyObject *p)
 		return;
 	}
 
-	bytes = ((PyBytesObject *)p)->obval;
+	bytes = ((PyBytesObject *)p)->ob_sval;
 	size = ((PyVarObject *)p)->ob_size;
 
 	printf("  size: %ld\n", size);
-	printf("  trying string: %s\n", string);
+	printf("  trying string: %s\n", bytesi);
 
 	printf("  first %ld bytes: ", size > 10 ? 10 : size);
 
