@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <Python.h>
 
+void print_python_bytes(PyObject *p);
 /**
  * print_python_list - C functions that print some basic info
  * about Python lists
@@ -16,14 +17,14 @@ void print_python_list(PyObject *p)
 	size = ((PyVarObject *)p)->ob_size;
 
 	printf("[*] Python list info\n");
-	printf("[*] Size of the Python List = %d\n", size);
+	printf("[*] Size of the Python List = %ld\n", size);
 	printf("[*] Allocated = %ld\n", list->allocated);
 
 	for (i = 0; i < size; i++)
 	{
 		item = ((PyListObject *)p)->ob_item[i];
 
-		printf("Element %d: %s\n", i, item->ob_type->tp_name);
+		printf("Element %ld: %s\n", i, item->ob_type->tp_name);
 		if (PyBytes_Check(item))
 			print_python_bytes(item);
 	}
