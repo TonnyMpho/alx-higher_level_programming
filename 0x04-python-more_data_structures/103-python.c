@@ -24,7 +24,7 @@ void print_python_list(PyObject *p)
 	{
 		item = ((PyListObject *)p)->ob_item[i];
 
-		printf("Element %ld: %s\n", i, item->ob_type->tp_name);
+		printf("Element %ld: %s\n", i, ((item)->ob_type)->tp_name);
 		if (PyBytes_Check(item))
 			print_python_bytes(item);
 	}
@@ -45,7 +45,7 @@ void print_python_bytes(PyObject *p)
 
 	if (!PyBytes_Check(p))
 	{
-		printf(" [ERROR] Invalid Bytes Object\n");
+		printf("  [ERROR] Invalid Bytes Object\n");
 		return;
 	}
 
@@ -55,9 +55,9 @@ void print_python_bytes(PyObject *p)
 	printf("  size: %ld\n", size);
 	printf("  trying string: %s\n", bytes);
 
-	printf("  first %ld bytes: ", size > 10 ? 10 : size);
+	printf("  first %ld bytes: ", size > 10 ? 10 : size + 1);
 
-	for (i = 0; i < (size > 10 ? 10 : size); i++)
+	for (i = 0; i < (size > 10 ? 10 : size + 1); i++)
 	{
 		printf("%02hhx", bytes[i]);
 		if (i == ((size > 10) ? 9 : size - 1))
