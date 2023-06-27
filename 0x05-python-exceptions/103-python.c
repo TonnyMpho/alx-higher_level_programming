@@ -100,8 +100,7 @@ void print_python_float(PyObject *p)
 		return;
 	}
 
-	if (PyFloat_Check(p))
-		value = ((PyFloatObject *)p)->ob_fval;
+	value = ((PyFloatObject *)p)->ob_fval;
 
 	printf("  value: %f\n", value);
 }
