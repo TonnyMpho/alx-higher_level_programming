@@ -90,7 +90,7 @@ void print_python_float(PyObject *p)
 	double value = 0;
 
 	fflush(stdout);
-	printf("[*] Python float info\n");
+	printf("[.] float object info\n");
 
 	if (!PyObject_TypeCheck(p, &PyFloat_Type))
 	{
