@@ -7,7 +7,7 @@ class Square:
     """ Instantiation with optional size """
     def __init__(self, size=0):
         """ Private instance attribute size"""
-        self.size = size
+        self.__size = size
 
     """ getter to retrieve size """
     def size(self):
