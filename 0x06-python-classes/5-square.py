@@ -37,8 +37,10 @@ class Square:
     in stdout the square with the character #
     """
     def my_print(self):
+        """ if size is equal to 0, print an empty line """
         if self.__size == 0:
             print()
 
+        """  prints in stdout the square with the character # """
         for i int range(self.__size):
             print("#" * self.__size))
