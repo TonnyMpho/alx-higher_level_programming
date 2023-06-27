@@ -103,5 +103,5 @@ void print_python_float(PyObject *p)
 	if (PyFloat_Check(p))
 		value = ((PyFloatObject *)p)->ob_fval;
 
-	printf("  [.] Value: %f\n", value);
+	printf("  value: %f\n", value);
 }
