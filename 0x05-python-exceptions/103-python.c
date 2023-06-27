@@ -33,7 +33,7 @@ void print_python_list(PyObject *p)
 			if (PyBytes_Check(item))
 				print_python_bytes(item);
 			else if (PyFloat_Check(item))
-				print_python_float(item)
+				print_python_float(item);
 		}
 	}
 	else
