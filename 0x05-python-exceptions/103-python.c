@@ -2,6 +2,7 @@
 #include <stdio.h>
 
 void print_python_bytes(PyObject *p);
+void print_python_float(PyObject *p);
 /**
  * print_python_list - C functions that print some basic info
  * about Python lists
@@ -88,8 +89,8 @@ void print_python_float(PyObject *p)
 {
 	double value = 0;
 
-	printf("[*] Python float info\n");
 	fflush(stdout);
+	printf("[*] Python float info\n");
 
 	if (!PyObject_TypeCheck(p, &PyFloat_Type))
 	{
