@@ -6,6 +6,7 @@
 class Node:
     """ Instantiation with data and next_node """
     def __init__(self, data, next_node=None):
+        """ instance attributes data, next_node """
         self.data = data
         self.next_node = next_node
 
@@ -31,7 +32,7 @@ class Node:
         @next_node.setter
         def next_node(self, value):
             """ check if value is Node and is None """
-            if (not isinstance(value, Node) or value != None):
+            if (not isinstance(value, Node) or value is not None):
                 raise TypeError("next_node must be a Node object")
             self.__next_node = value
 
