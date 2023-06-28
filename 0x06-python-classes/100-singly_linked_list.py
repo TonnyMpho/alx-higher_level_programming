@@ -69,7 +69,7 @@ class SinglyLinkedList:
         """ print() representation of a SinglyLinkedList """
 
         curr = self.__head
-        sll = str(curr.data)
+        sll = ""
 
         while curr is not None:
             sll += "\n" + str(curr.data)
