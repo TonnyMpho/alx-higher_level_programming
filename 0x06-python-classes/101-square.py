@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# 6-square.py - By TM
+# 101-square.py - By TM
 """ class Square that defines a square """
 
 
@@ -69,3 +69,17 @@ class Square:
             for j in range(self.__size):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """Representation of a Square."""
+        if self.__size != 0:
+            for i in range(self.__position[1]):
+                print()
+        for i in range(0, self.__size):
+            for j in range(self.__position[0]):
+                print(" ", end="")
+            for j in range(self.__size):
+                print("#", end="")
+            if i != self.__size - 1:
+                print("")
+        return ("")
