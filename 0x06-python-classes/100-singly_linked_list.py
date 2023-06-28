@@ -1,0 +1,71 @@
+#!/usr/bin/python3
+# 100-singly_linked_list.py - By TM
+""" class Node that defines a node of a singly linked list """
+
+
+class Node:
+    """ Instantiation with data and next_node """
+    def __init__(self, data, next_node=None):
+        self.data = data
+        self.next_node = next_node
+
+        @property
+        def data(self):
+            return self.__data
+
+        @data.setter
+        def data(self, value):
+            if (not isinstance(value, int)):
+                raise ValueError("data must be an integer")
+            self.__data = value
+
+        @property
+        def next_node(self):
+            return self.__next_node
+
+        @next_node.setter
+        def next_node(self, value):
+            if (not isinstance(value, Node) or value != None):
+                raise TypeError("next_node must be a Node object")
+            self.__next_node = value
+
+
+
+class SinglyLinkedList:
+    """ Simple instantiation """
+    def __init__(self):
+        """ Private instance attribute: head (no setter or getter) """
+        self.__head = None
+
+    def sorted_insert(self, value):
+        new_node = Node(value)
+
+        if (self.__head is None):
+            self.__head = new_node
+            return
+
+        if (value < self.__head.data):
+            new_node.next_node = self.__head
+            self.__head = new_node
+            return
+
+        curr = self.__head
+
+        while (curr.next_node is not None and curr.next_node.data < value):
+            curr = curr.next_node
+
+        new_node.next-node = curr.next_node
+        curr.next_node = new_node
+
+    def __str__(self):
+        if self.__head is None:
+            return ""
+
+        curr = self.__head
+        sll = str(curr.data)
+
+        while curr.net_node is not None:
+            curr = curr.next_node
+            sll += "\n" + str(curr.data)
+
+        return sll
