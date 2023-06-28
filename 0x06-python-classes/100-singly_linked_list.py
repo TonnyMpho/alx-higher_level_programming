@@ -67,13 +67,14 @@ class SinglyLinkedList:
 
     """ Public instance method that prints the list """
     def __str__(self):
+        """ print() representation of a SinglyLinkedList """
         if self.__head is None:
             return ""
 
         curr = self.__head
         sll = str(curr.data)
 
-        while curr.net_node is not None:
+        while curr.next_node is not None:
             curr = curr.next_node
             sll += "\n" + str(curr.data)
 
