@@ -74,7 +74,7 @@ class SinglyLinkedList:
         sll = str(curr.data)
 
         while curr is not None:
-            sll += "\n" + str(curr.data)
             curr = curr.next_node
+            sll += "\n" + str(curr.data)
 
         return sll
