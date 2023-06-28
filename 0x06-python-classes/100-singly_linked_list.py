@@ -61,16 +61,17 @@ class SinglyLinkedList:
         while (curr.next_node is not None and curr.next_node.data < value):
             curr = curr.next_node
 
-        if curr.next_node is not None:
-            new_node.next_node = curr.next_node
+        new_node.next_node = curr.next_node
         curr.next_node = new_node
 
     """ Public instance method that prints the list """
     def __str__(self):
         """ print() representation of a SinglyLinkedList """
+        if self.__head is None:
+            return ""
 
         curr = self.__head
-        sll = ""
+        sll = str(curr.data)
 
         while curr is not None:
             sll += "\n" + str(curr.data)
