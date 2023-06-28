@@ -61,7 +61,8 @@ class SinglyLinkedList:
         while (curr.next_node is not None and curr.next_node.data < value):
             curr = curr.next_node
 
-        new_node.next_node = curr.next_node
+        if curr.next_node is not None:
+            new_node.next_node = curr.next_node
         curr.next_node = new_node
 
     """ Public instance method that prints the list """
