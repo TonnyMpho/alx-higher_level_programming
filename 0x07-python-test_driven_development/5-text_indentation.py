@@ -20,11 +20,16 @@ def text_indentation(text):
     if type(text) != str:
         raise TypeError("text must be a string")
 
-    quotation = [".", '?', ':']
+    punctuation = [".", '?', ':']
 
-    for line in text:
-        print(line, end="")
-        if mark in quotation:
-            print("\n\n", end='')
+    lines = []
+    line = ""
+    for char in text:
+        line += char
+        if char in punctuation:
+            lines.append(line.strip())
+            line = ""
 
-    print()
+    for line in lines:
+        print(line)
+        print()
