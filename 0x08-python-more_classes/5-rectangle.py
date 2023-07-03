@@ -75,4 +75,4 @@ class Rectangle:
 
     def __del__(self):
         """ called when an instance of Rectangle is deleted """
-        return "Bye rectangle..."
+        print("Bye rectangle...")
