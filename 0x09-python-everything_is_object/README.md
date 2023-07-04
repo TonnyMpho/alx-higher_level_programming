@@ -28,128 +28,142 @@
 >>> b = 89
 ```
 
-4. Right count =
-mandatory
-In the following code, do a and b point to the same object? Answer with Yes or No.
+### 4. Right count =
 
+#### In the following code, do a and b point to the same object? Answer with Yes or No.
+```python
 >>> a = 89
 >>> b = a
+```
 
-5. Right count =+
-mandatory
-In the following code, do a and b point to the same object? Answer with Yes or No.
+### 5. Right count =+
 
+#### In the following code, do a and b point to the same object? Answer with Yes or No.
+```python
 >>> a = 89
 >>> b = a + 1
+```
 
-6. Is equal
-mandatory
-What do these 3 lines print?
+### 6. Is equal
 
+#### What do these 3 lines print?
+```python
 >>> s1 = "Best School"
 >>> s2 = s1
 >>> print(s1 == s2)
+```
 
-7. Is the same
-mandatory
-What do these 3 lines print?
+### 7. Is the same
 
+#### What do these 3 lines print?
+```python
 >>> s1 = "Best"
 >>> s2 = s1
 >>> print(s1 is s2)
+```
 
-8. Is really equal
-mandatory
-What do these 3 lines print?
+### 8. Is really equal
 
+#### What do these 3 lines print?
+```python
 >>> s1 = "Best School"
 >>> s2 = "Best School"
 >>> print(s1 == s2)
+```
 
-9. Is really the same
-mandatory
-What do these 3 lines print?
+### 9. Is really the same
 
+#### What do these 3 lines print?
+```python
 >>> s1 = "Best School"
 >>> s2 = "Best School"
 >>> print(s1 is s2)
+```
 
-10. And with a list, is it equal
-mandatory
-What do these 3 lines print?
+### 10. And with a list, is it equal
 
+#### What do these 3 lines print?
+```python
 >>> l1 = [1, 2, 3]
 >>> l2 = [1, 2, 3] 
 >>> print(l1 == l2)
+```
 
-11. And with a list, is it the same
-mandatory
-What do these 3 lines print?
+### 11. And with a list, is it the same
 
+#### What do these 3 lines print?
+```python
 >>> l1 = [1, 2, 3]
 >>> l2 = [1, 2, 3] 
 >>> print(l1 is l2)
+```
 
-12. And with a list, is it really equal
-mandatory
-What do these 3 lines print?
+### 12. And with a list, is it really equal
 
+#### What do these 3 lines print?
+```python
 >>> l1 = [1, 2, 3]
 >>> l2 = l1
 >>> print(l1 == l2)
+```
 
-13. And with a list, is it really the same
-mandatory
-What do these 3 lines print?
+### 13. And with a list, is it really the same
 
+#### What do these 3 lines print?
+```python
 >>> l1 = [1, 2, 3]
 >>> l2 = l1
 >>> print(l1 is l2)
+```
 
-14. List append
-mandatory
-What does this script print?
+### 14. List append
 
+#### What does this script print?
+```python
 l1 = [1, 2, 3]
 l2 = l1
 l1.append(4)
 print(l2)
+```
 
-15. List add
-mandatory
-What does this script print?
+### 15. List add
 
+#### What does this script print?
+```python
 l1 = [1, 2, 3]
 l2 = l1
 l1 = l1 + [4]
 print(l2)
+```
 
-16. Integer incrementation
-mandatory
-What does this script print?
+### 16. Integer incrementation
 
+#### What does this script print?
+```python
 def increment(n):
     n += 1
 
 a = 1
 increment(a)
 print(a)
+```
 
-17. List incrementation
-mandatory
-What does this script print?
+### 17. List incrementation
 
+#### What does this script print?
+```python
 def increment(n):
     n.append(4)
 
 l = [1, 2, 3]
 increment(l)
 print(l)
+```
 
-18. List assignation
-mandatory
-What does this script print?
+### 18. List assignation
 
+#### What does this script print?
+```python
 def assign_value(n, v):
     n = v
 
@@ -157,18 +171,20 @@ l1 = [1, 2, 3]
 l2 = [4, 5, 6]
 assign_value(l1, l2)
 print(l1)
+```
 
-19. Copy a list object
-mandatory
-Write a function def copy_list(l): that returns a copy of a list.
+### 19. Copy a list object
 
-The input list can contain any type of objects
-Your file should be maximum 3-line long (no documentation needed)
-You are not allowed to import any module
+#### Write a function def copy_list(l): that returns a copy of a list.
 
-20. Tuple or not?
-mandatory
+* The input list can contain any type of objects
+* Your file should be maximum 3-line long (no documentation needed)
+* You are not allowed to import any module
+
+### 20. Tuple or not?
+```python
 a = ()
+```
 
 ### 21. Tuple or not?
 
