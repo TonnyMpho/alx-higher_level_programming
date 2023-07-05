@@ -19,7 +19,7 @@ void print_python_string(PyObject *p)
 		return;
 	}
 
-	len = PyUnicode_GET_SIZE(p);
+	len = ((PyASCIIObject *)(p))->length;
 	str = PyUnicode_AsWideCharString(p, &len);
 
 	if (PyUnicode_IS_COMPACT_ASCII(p))
