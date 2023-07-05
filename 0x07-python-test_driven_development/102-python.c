@@ -28,6 +28,6 @@ void print_python_string(PyObject *p)
 		printf("  type: compact unicode object\n");
 
 	printf("  length: %ld\n", len);
-	printf("  value: %s\n", str);
+	printf("  value: %ls\n", str);
 }
 
