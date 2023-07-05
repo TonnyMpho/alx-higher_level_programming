@@ -3,8 +3,8 @@
 non-attacking queens on an N×N chessboard.
 Write a program that solves the N queens problem.
 """
-
 import sys
+
 
 def position(board, row, col):
     """
@@ -12,10 +12,11 @@ def position(board, row, col):
     """
     for i in range(col):
         if board[i][1] == row or board[i][1] == row - (col - i) or \
-            board[i][1] == row + (col - i):
+                board[i][1] == row + (col - i):
             return False
 
     return True
+
 
 def nqueens(board, col):
     """ Position the queens """
@@ -28,6 +29,7 @@ def nqueens(board, col):
             board[col] = [col, i]
 
             nqueens(board, col + 1)
+
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:
