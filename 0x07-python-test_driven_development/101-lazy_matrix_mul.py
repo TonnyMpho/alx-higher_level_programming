@@ -20,6 +20,6 @@ def lazy_matrix_mul(m_a, m_b):
 
     """ matrix multiplication using numpy """
 
-    mul = np.matmul(m_aa, m_bb)
+    mul = np.matmul(m_a, m_b)
 
     return mul
