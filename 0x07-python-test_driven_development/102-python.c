@@ -8,10 +8,10 @@
  */
 void print_python_string(PyObject *p)
 {
-	py_ssize_t len;
+	size_t len;
 	char *str;
 
-	if (!PyUnicode_Check(p))
+	if (strcmp(p->ob_type->tp_name, "str"))
 	{
 		printf("  [ERROR] Invalid String Object\n");
 		return;
@@ -26,7 +26,7 @@ void print_python_string(PyObject *p)
 	else
 		printf("  type: compact unicode object\n");
 
-	printf("  length: %zd\n", len);
+	printf("  length: %ld\n", len);
 	printf("  value: %s\n", str);
 }
 
