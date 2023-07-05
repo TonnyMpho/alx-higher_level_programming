@@ -10,19 +10,19 @@ class TestMaxInteger(unittest.TestCase):
     Unittesting the function 6-max_integer
     """
 
-    def emptylist(self):
+    def test_empty_list(self):
         """ Testing for an empty list """
         self.assertIsNone(max_integer([]))
 
-    def findmax_ordered(self):
+    def test_findmax_ordered(self):
         """ Testing list """
         self.assertEqual(max_integer([1, 2, 3, 4]), 4)
 
-    def findmax_unordered(self):
+    def test_findmax_unordered(self):
         """ Testing an unordered list """
         self.assertEqual(max_integer([1, 3, 4, 2]), 4)
 
-    def findmax_beginning(self):
+    def test_findmax_beginning(self):
         """ Testing - max integer if its at the beginning of the list"""
         self.assertEqual(max_integer([4, 3, 1, 2]), 4)
 
