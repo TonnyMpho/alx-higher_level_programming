@@ -11,6 +11,8 @@ void print_python_string(PyObject *p)
 	size_t len;
 	char *str;
 
+	printf("[.] string object info\n");
+
 	if (strcmp(p->ob_type->tp_name, "str"))
 	{
 		printf("  [ERROR] Invalid String Object\n");
@@ -18,8 +20,6 @@ void print_python_string(PyObject *p)
 	}
 
 	str = PyUnicode_AsUTF8AndSize(p, &len);
-
-	printf("[.] string object info\n");
 
 	if (PyUnicode_IS_COMPACT_ASCII(p))
 		printf("  type: compact ascii\n");
