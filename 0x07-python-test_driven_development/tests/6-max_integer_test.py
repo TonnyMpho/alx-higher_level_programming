@@ -10,9 +10,9 @@ class TestMaxInteger(unittest.TestCase):
     Unittesting the function 6-max_integer
     """
 
-    def empylist(self):
+    def emptylist(self):
         """ Testing for an empty list """
-        self.assertNone(max_integer([]), None)
+        self.assertIsNone(max_integer([]))
 
     def findmax_ordered(self):
         """ Testing list """
