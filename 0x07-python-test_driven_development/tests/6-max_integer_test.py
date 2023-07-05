@@ -26,5 +26,6 @@ class TestMaxInteger(unittest.TestCase):
         """ Testing - max integer if its at the beginning of the list"""
         self.assertEqual(max_integer([4, 3, 1, 2]), 4)
 
-if __name__=='__main__':
+
+if __name__ == '__main__':
     unittest.main()
