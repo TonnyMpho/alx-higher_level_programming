@@ -19,7 +19,8 @@ void print_python_string(PyObject *p)
 		return;
 	}
 
-	str = PyUnicode_AsUTF8AndSize(p, &len);
+	len = PyUnicode_GET_SIZE(p));
+	str = PyUnicode_AsWideCharString(p, &len);
 
 	if (PyUnicode_IS_COMPACT_ASCII(p))
 		printf("  type: compact ascii\n");
