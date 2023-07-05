@@ -26,6 +26,18 @@ class TestMaxInteger(unittest.TestCase):
         """ Testing - max integer if its at the beginning of the list"""
         self.assertEqual(max_integer([4, 3, 1, 2]), 4)
 
+    def test_findmax_negative(self):
+        """ Test for max negative numbers """
+        self.assertEqual(max_integer([-31, -4, -1, -10]), -1)
+
+    def test_findmax_neg_1(self):
+        """ Test for max only if theres one negative """
+        self.assertEqual(max_integer([4, 3, -1, 2]), 4)
+
+    def test_findmax_one(self):
+        """ Test for max on a single list """
+        self.assertEqual(max_integer([5]), 5)
+
 
 if __name__ == '__main__':
     unittest.main()
