@@ -10,7 +10,7 @@
 void print_python_string(PyObject *p)
 {
 	size_t len;
-	char *str;
+	PyObject *str;
 
 	printf("[.] string object info\n");
 
