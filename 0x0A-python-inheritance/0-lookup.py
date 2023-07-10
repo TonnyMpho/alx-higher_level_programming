@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" Module that contains a lookup function """
 
 def lookup(obj):
     """
