@@ -8,8 +8,8 @@ class MyInt(int):
     """
     def __eq__(self, other):
         """ invert == by != """
-        return self.value != other
+        return self != other
 
     def __ne__(self, other):
         """ invert != by == """
-        return self.value == other
+        return self == other
