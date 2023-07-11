@@ -20,9 +20,9 @@ class Student:
         representation of a Student instance
         """
         attr_dict = {}
-        if attr is not None:
+        if attr is not None or isinstance(attrs, list):
             for attr in attrs:
-                if attr in self.__dict__:
+                if isinstance(attr) and attr in self.__dict__:
                     attr_dict[attr] = self.__dict__[attr]
             return attr_dict
 
