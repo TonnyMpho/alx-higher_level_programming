@@ -9,4 +9,4 @@ def class_to_json(obj):
     integer and boolean) for JSON serialization of an object
     """
     if isinstance(obj, (list, dict, str, int, bool)):
-        return obj.__dict__
+        return obj
