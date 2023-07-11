@@ -22,8 +22,8 @@ class Student:
         attr_dict = {}
         if attr is not None or isinstance(attrs, list):
             for attr in attrs:
-                if isinstance(attr) and attr in self.__dict__:
-                    attr_dict[attr] = self.__dict__[attr]
+                if isinstance(attr) and hasattr(self, attr):
+                    attr_dict[attr] = getattr(self, attr)
             return attr_dict
 
         return self.__dict__
