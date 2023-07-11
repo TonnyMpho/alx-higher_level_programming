@@ -20,9 +20,9 @@ class Student:
         representation of a Student instance
         """
         attr_dict = {}
-        if attr is not None or isinstance(attrs, list):
+        if attrs is not None and isinstance(attrs, list):
             for attr in attrs:
-                if isinstance(attr) and hasattr(self, attr):
+                if isinstance(attr, str) and hasattr(self, attr):
                     attr_dict[attr] = getattr(self, attr)
             return attr_dict
 
