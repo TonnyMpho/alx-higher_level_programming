@@ -29,6 +29,14 @@ Traceback (most recent call last):
 ValueError: age must be greater than 0
 
 
+non-integer argument
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", False)
+Traceback (most recent call last):
+        ...
+TypeError: name must be an integer
+
+
 negative value
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("distance", -4)
@@ -61,6 +69,14 @@ TypeError: integer_validator() missing 2 required positional arguments: 'name' a
 Traceback (most recent call last):
     	...
 TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+
+non-integer argument
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("name", (1,2))
+Traceback (most recent call last):
+        ...
+TypeError: name must be an integer
 
 
 Trying a list
