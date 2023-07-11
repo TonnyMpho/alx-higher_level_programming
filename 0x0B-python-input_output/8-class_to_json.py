@@ -10,3 +10,10 @@ def class_to_json(obj):
     """
     if isinstance(obj, (list, dict, str, int, bool)):
         return obj
+
+    if isinstance(obj, object):
+        attr = {}
+        for i, val in obj.__dict__.items():
+            attr[i] = class_to_jason(value)
+        return attr
+    return None
