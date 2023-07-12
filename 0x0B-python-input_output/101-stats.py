@@ -7,8 +7,8 @@ import signal
 
 file_size = 0
 status_code = {}
-
 count = 0
+
 
 def print_stats():
     print("File size: {}".format(file_size))
