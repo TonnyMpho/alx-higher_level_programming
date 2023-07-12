@@ -15,9 +15,11 @@ def print_stats():
     for code in sorted(status_code.keys()):
         print("{}: {}".format(code, status_code[code]))
 
+
 def signal_handler(sig, frame):
     print_stats()
     sys.exit(0)
+
 
 signal.signal(signal.SIGINT, signal_handler)
 
@@ -37,6 +39,6 @@ try:
                 status_code[code] += 1
             else:
                 status_code[code] = 1
+
 except KeyboardInterrupt:
     print_stats()
-
