@@ -16,20 +16,13 @@ def print_stats():
         print("{}: {}".format(code, status_code[code]))
 
 
-def signal_handler(sig, frame):
-    print_stats()
-    sys.exit(0)
-
-
-signal.signal(signal.SIGINT, signal_handler)
-
 try:
     for line in sys.stdin:
         count += 1
-        line = line.strip()
         if count % 10 == 0:
             print_stats()
 
+        line = line.strip()
         parts = line.split()
         if len(parts) >= 9:
             size = int(parts[-1])
