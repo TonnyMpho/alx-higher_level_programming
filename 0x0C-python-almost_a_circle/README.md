@@ -105,7 +105,7 @@
 
 ### 12. Square update
 
-#### Update the class Square by adding the public method ``python def update(self, *args, **kwargs)`` that assigns attributes:
+#### Update the class Square by adding the public method ```python def update(self, *args, **kwargs)``` that assigns attributes:
 
 * `*args` is the list of arguments - no-keyworded arguments
 * 1st argument should be the id attribute
