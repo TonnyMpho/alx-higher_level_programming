@@ -129,7 +129,8 @@ class Base:
                             int(row[1]), int(row[2]), int(row[3]), int(row[4]),
                             int(row[0]))
                     if cls.__name__ == 'Square':
-                        obj = cls(int(row[1]), int(row[2]), int(row[3]), int(row[0]))
+                        obj = cls(
+                            int(row[1]), int(row[2]), int(row[3]), int(row[0]))
                     instances.append(obj)
                 return instances
         return instances
@@ -137,7 +138,8 @@ class Base:
     @staticmethod
     def draw(list_rectangles, list_squares):
         """
-        static method that opens a window and draws all the Rectangles and Squares
+        static method that opens a window and draws all
+        the Rectangles and Squares
         """
         window = turtle.Screen()
         window.bgcolor("white")
