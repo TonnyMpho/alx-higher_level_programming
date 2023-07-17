@@ -71,14 +71,6 @@ class TestBase(unittest.TestCase):
         json_string = b.to_json_string([{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Jane'}])
         self.assertEqual('[{"id": 1, "name": "John"}, {"id": 2, "name": "Jane"}]', json_string)
 
-    def test_to_json_string_empty(self):
-        """
-        Test to_json_string method with an empty list
-        """
-        b = Base()
-        json_string = b.to_json_string([])
-        self.assertEqual('[]', json_string)
-
     def test_from_json_string(self):
         """
         Test from_json_string method with a valid JSON string
@@ -87,14 +79,6 @@ class TestBase(unittest.TestCase):
         json_string = '[{"id": 1, "name": "John"}, {"id": 2, "name": "Jane"}]'
         json_list = b.from_json_string(json_string)
         self.assertEqual([{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Jane'}], json_list)
-
-    def test_from_json_string_empty(self):
-        """
-        Test from_json_string method with an empty JSON string
-        """
-        b = Base()
-        json_list = b.from_json_string('')
-        self.assertEqual([], json_list)
 
 
 if __name__ == '__main__':

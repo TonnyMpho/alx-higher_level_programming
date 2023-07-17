@@ -83,7 +83,7 @@ class TestSquare(unittest.TestCase):
         """
         s = Square(10)
         s.update(1, 2, 3, 4)
-        self.assertEqual("[Square] (1) 4/3 - 2", str(s))
+        self.assertEqual("[Square] (1) 3/4 - 2", str(s))
 
     def test_update_kwargs(self):
         """
@@ -99,7 +99,7 @@ class TestSquare(unittest.TestCase):
         """
         s = Square(10)
         s.update(1, **{'size': 2, 'x': 3, 'y': 4})
-        self.assertEqual("[Square] (1) 3/4 - 2", str(s))
+        self.assertEqual("[Square] (1) 0/0 - 10", str(s))
 
     def test_to_dictionary(self):
         """

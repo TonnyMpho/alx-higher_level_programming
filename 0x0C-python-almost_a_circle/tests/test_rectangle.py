@@ -118,7 +118,7 @@ class TestRectangle(unittest.TestCase):
         """
         r = Rectangle(10, 5)
         r.update(1, 2, 3, **{'x': 4, 'y': 5})
-        self.assertEqual("[Rectangle] (1) 4/5 - 2/3", str(r))
+        self.assertEqual("[Rectangle] (1) 0/0 - 2/3", str(r))
 
     def test_to_dictionary(self):
         """
