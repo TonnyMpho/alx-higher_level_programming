@@ -3,6 +3,10 @@
 Unittests for base
 """
 import unittest
+import os
+import json
+import csv
+import turtle
 from models.base import Base
 
 
