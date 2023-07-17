@@ -1,4 +1,4 @@
-#!/usr/nin/python3
+#!/usr/bin/python3
 """ the “base” of all other classes in this project """
 import json
 import csv
