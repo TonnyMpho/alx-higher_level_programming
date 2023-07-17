@@ -5,6 +5,7 @@ from models.square import Square
 
 
 class TestSquare(unittest.TestCase):
+    """ Unittest class """
     def test_size(self):
         """
         Test getter and setter for size attribute

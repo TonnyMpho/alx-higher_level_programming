@@ -7,6 +7,7 @@ from models.rectangle import Rectangle
 
 
 class TestRectangle(unittest.TestCase):
+    """ Unittest """
     def test_width(self):
         """
         Test getter and setter for width attribute

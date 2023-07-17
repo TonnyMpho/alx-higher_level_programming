@@ -7,6 +7,7 @@ from models.base import Base
 
 
 class TestBase(unittest.TestCase):
+    """ Unittest class """
     def test_id_none(self):
         """
         Test initializing an instance of Base class with no id
