@@ -16,5 +16,6 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(s2, '[Square] (2) 2/0 - 2')
         self.assertRaises(TypeError, Square)
 
+
 if __name__ == '__main__':
     unittest.main()
