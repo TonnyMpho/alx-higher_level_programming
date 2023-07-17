@@ -69,8 +69,11 @@ class TestBase(unittest.TestCase):
         Test to_json_string method with list of dictionaries
         """
         b = Base()
-        json_string = b.to_json_string([{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Jane'}])
-        self.assertEqual('[{"id": 1, "name": "John"}, {"id": 2, "name": "Jane"}]', json_string)
+        json_string = b.to_json_string(
+                [{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Jane'}])
+        self.assertEqual(
+                '[{"id": 1, "name": "John"}, {"id": 2, "name": "Jane"}]',
+                json_string)
 
     def test_from_json_string(self):
         """
@@ -79,7 +82,9 @@ class TestBase(unittest.TestCase):
         b = Base()
         json_string = '[{"id": 1, "name": "John"}, {"id": 2, "name": "Jane"}]'
         json_list = b.from_json_string(json_string)
-        self.assertEqual([{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Jane'}], json_list)
+        self.assertEqual(
+                [{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Jane'}],
+                json_list)
 
 
 if __name__ == '__main__':

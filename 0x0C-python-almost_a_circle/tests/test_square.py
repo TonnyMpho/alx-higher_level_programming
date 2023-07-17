@@ -107,7 +107,8 @@ class TestSquare(unittest.TestCase):
         Test to_dictionary method
         """
         s = Square(10, 2, 1, 9)
-        self.assertEqual({'id': 9, 'x': 2, 'size': 10, 'y': 1}, s.to_dictionary())
+        self.assertEqual(
+                {'id': 9, 'x': 2, 'size': 10, 'y': 1}, s.to_dictionary())
 
 
 if __name__ == '__main__':
