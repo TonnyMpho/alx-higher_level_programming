@@ -178,3 +178,29 @@ $
 - Records should be listed by descending score
 - The database name will be passed as an argument to the mysql command
 - In this example, new data have been added to the table __second_table.__
+
+#### Advanced
+
+### 17. Go to UTF8
+
+#### A script that converts hbtn_0c_0 database to UTF8 (utf8mb4, collate utf8mb4_unicode_ci) in your MySQL server.
+
+##### You need to convert all of the following to UTF8:
+
+- Database hbtn_0c_0
+- Table first_table
+- Field name in first_table
+
+### 18. Temperatures #0
+
+##### Import in __hbtn_0c_0__ database this table dump: [download](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/272/temperatures.sql)
+
+#### A script that displays the average temperature (Fahrenheit) by city ordered by temperature (descending).
+
+### 19. Temperatures #1
+
+#### A script that displays the top 3 of cities temperature during July and August ordered by temperature (descending)
+
+### 20. Temperatures #2
+
+#### A script that displays the max temperature of each state (ordered by State name).
