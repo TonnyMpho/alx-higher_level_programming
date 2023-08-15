@@ -1,4 +1,4 @@
 -- script that displays the top 3 of cities temperature
 -- during July and August ordered by temperature (descending)
 
-SELECT city AVG(`value`) AS 'avg_temp' FROM hbtn_0c_0 WHERE month = 6 AND month = 7 GROUP BY city ORDER BY `avg_temp`;
+SELECT city AVG(`value`) AS 'avg_temp' FROM hbtn_0c_0 WHERE month = 6 AND month = 7 GROUP BY city ORDER BY `avg_temp` DESC LIMIT 3;
