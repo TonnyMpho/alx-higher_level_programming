@@ -46,7 +46,7 @@ id  name
 $
 ```
 
-![SQL JOINS cheatsheet](https://www.bing.com/images/blob?bcid=qFKYg-XqUvYFxA)
+![SQL JOINS cheatsheet](https://www.bing.com/images/blob?bcid=r1KYg-XqUvYFaQ)
 
 ### Tasks
 
