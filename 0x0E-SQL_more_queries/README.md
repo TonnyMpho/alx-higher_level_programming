@@ -89,137 +89,125 @@ $
 	- id INT with the default value 1
 	- name VARCHAR(256)
 - The database name will be passed as an argument of the mysql command
-- If the table id_not_null already exists, your script should not fail
+- If the table id_not_null already exists, script should not fail
 
 ### 5. Unique ID
 
 #### A script that creates the table __unique_id__ on your MySQL server.
 
-unique_id description:
-id INT with the default value 1 and must be unique
-name VARCHAR(256)
-The database name will be passed as an argument of the mysql command
-If the table unique_id already exists, your script should not fail
+- __unique_id__ description:
+	- id INT with the default value 1 and must be unique
+	- name VARCHAR(256)
+- The database name will be passed as an argument of the mysql command
+- If the table __unique_id__ already exists, script should not fail
 
-6. States table
-mandatory
-Write a script that creates the database hbtn_0d_usa and the table states (in the database hbtn_0d_usa) on your MySQL server.
+### 6. States table
 
-states description:
-id INT unique, auto generated, can’t be null and is a primary key
-name VARCHAR(256) can’t be null
-If the database hbtn_0d_usa already exists, your script should not fail
-If the table states already exists, your script should not fail
+#### A script that creates the database __hbtn_0d_usa__ and the table states (in the database __hbtn_0d_usa__).
 
-7. Cities table
-mandatory
-Write a script that creates the database hbtn_0d_usa and the table cities (in the database hbtn_0d_usa) on your MySQL server.
+- states description:
+	- id INT unique, auto generated, can’t be null and is a primary key
+	- name VARCHAR(256) can’t be null
+- If the database __hbtn_0d_usa__ already exists, your script should not fail
+- If the table states already exists, your script should not fail
 
-cities description:
-id INT unique, auto generated, can’t be null and is a primary key
-state_id INT, can’t be null and must be a FOREIGN KEY that references to id of the states table
-name VARCHAR(256) can’t be null
-If the database hbtn_0d_usa already exists, your script should not fail
-If the table cities already exists, your script should not fail
+### 7. Cities table
 
-8. Cities of California
-mandatory
-Write a script that lists all the cities of California that can be found in the database hbtn_0d_usa.
+#### A script that creates the database __hbtn_0d_usa__ and the table cities (in the database __hbtn_0d_usa__).
 
-The states table contains only one record where name = California (but the id can be different, as per the example)
-Results must be sorted in ascending order by cities.id
-You are not allowed to use the JOIN keyword
-The database name will be passed as an argument of the mysql command
+- cities description:
+	- id INT unique, auto generated, can’t be null and is a primary key
+	- state_id INT, can’t be null and must be a FOREIGN KEY that references to id of the states table
+	- name VARCHAR(256) can’t be null
+- If the database __hbtn_0d_usa__ already exists, script should not fail
+- If the table cities already exists, script should not fail
 
-9. Cities by States
-mandatory
-Write a script that lists all cities contained in the database hbtn_0d_usa.
+### 8. Cities of California
 
-Each record should display: cities.id - cities.name - states.name
-Results must be sorted in ascending order by cities.id
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
+#### A script that lists all the cities of California that can be found in the database __hbtn_0d_usa__.
 
-10. Genre ID by show
-mandatory
-Import the database dump from hbtn_0d_tvshows to your MySQL server: download
+- The states table contains only one record where name = California 
+- Results must be sorted in ascending order by cities.id
+- not allowed to use the JOIN keyword
+- The database name will be passed as an argument of the mysql command
 
-Write a script that lists all shows contained in hbtn_0d_tvshows that have at least one genre linked.
+### 9. Cities by States
 
-Each record should display: tv_shows.title - tv_show_genres.genre_id
-Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
+#### A script that lists all cities contained in the database __hbtn_0d_usa__.
 
-11. Genre ID for all shows
-mandatory
-Import the database dump of hbtn_0d_tvshows to your MySQL server: download (same as 10-genre_id_by_show.sql)
+- Each record should display: cities.id - cities.name - states.name
+- Results must be sorted in ascending order by cities.id
+- can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
 
-Write a script that lists all shows contained in the database hbtn_0d_tvshows.
+### 10. Genre ID by show
 
-Each record should display: tv_shows.title - tv_show_genres.genre_id
-Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
-If a show doesn’t have a genre, display NULL
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
+##### Import the database dump from __hbtn_0d_tvshows__ to your MySQL server: [download](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-higher-level_programming+/274/hbtn_0d_tvshows.sql)
 
-12. No genre
-mandatory
-Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 11-genre_id_all_shows.sql)
+#### A script that lists all shows contained in __hbtn_0d_tvshows__ that have at least one genre linked.
 
-Write a script that lists all shows contained in hbtn_0d_tvshows without a genre linked.
+- Each record should display: tv_shows.title - tv_show_genres.genre_id
+- Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
 
-Each record should display: tv_shows.title - tv_show_genres.genre_id
-Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
+### 11. Genre ID for all shows
 
-13. Number of shows by genre
-mandatory
-Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 12-no_genre.sql)
+#### A script that lists all shows contained in the database __hbtn_0d_tvshows__.
 
-Write a script that lists all genres from hbtn_0d_tvshows and displays the number of shows linked to each.
+- Each record should display: tv_shows.title - tv_show_genres.genre_id
+- Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
+- If a show doesn’t have a genre, display NULL
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
 
-Each record should display: <TV Show genre> - <Number of shows linked to this genre>
-First column must be called genre
-Second column must be called number_of_shows
-Don’t display a genre that doesn’t have any shows linked
-Results must be sorted in descending order by the number of shows linked
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
+### 12. No genre
 
-14. My genres
-mandatory
-Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 13-count_shows_by_genre.sql)
+#### A script that lists all shows contained in __hbtn_0d_tvshows__ without a genre linked.
 
-Write a script that uses the hbtn_0d_tvshows database to lists all genres of the show Dexter.
+- Each record should display: tv_shows.title - tv_show_genres.genre_id
+- Results must be sorted in ascending order by tv_shows.title and tv_show_genres.genre_id
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
 
-The tv_shows table contains only one record where title = Dexter (but the id can be different)
-Each record should display: tv_genres.name
-Results must be sorted in ascending order by the genre name
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
+### 13. Number of shows by genre
 
-15. Only Comedy
-mandatory
-Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 14-my_genres.sql)
+#### A script that lists all genres from __hbtn_0d_tvshows__ and displays the number of shows linked to each.
 
-Write a script that lists all Comedy shows in the database hbtn_0d_tvshows.
+- Each record should display: <TV Show genre> - <Number of shows linked to this genre>
+- First column must be called genre
+- Second column must be called number_of_shows
+- Don’t display a genre that doesn’t have any shows linked
+- Results must be sorted in descending order by the number of shows linked
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
 
-The tv_genres table contains only one record where name = Comedy (but the id can be different)
-Each record should display: tv_shows.title
-Results must be sorted in ascending order by the show title
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
+### 14. My genres
 
-16. List shows and genres
-mandatory
-Import the database dump from hbtn_0d_tvshows to your MySQL server: download (same as 15-comedy_only.sql)
+#### A script that uses the __hbtn_0d_tvshows__ database to lists all genres of the show Dexter.
 
-Write a script that lists all shows, and all genres linked to that show, from the database hbtn_0d_tvshows.
+- The tv_shows table contains only one record where title = Dexter (but the id can be different)
+- Each record should display: tv_genres.name
+- Results must be sorted in ascending order by the genre name
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
 
-If a show doesn’t have a genre, display NULL in the genre column
-Each record should display: tv_shows.title - tv_genres.name
-Results must be sorted in ascending order by the show title and genre name
-You can use only one SELECT statement
-The database name will be passed as an argument of the mysql command
+### 15. Only Comedy
+
+#### A script that lists all Comedy shows in the database __hbtn_0d_tvshows__.
+
+- The tv_genres table contains only one record where name = Comedy (but the id can be different)
+- Each record should display: tv_shows.title
+- Results must be sorted in ascending order by the show title
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
+
+### 16. List shows and genres
+
+#### A script that lists all shows, and all genres linked to that show, from the database __hbtn_0d_tvshows__.
+
+- If a show doesn’t have a genre, display NULL in the genre column
+- Each record should display: tv_shows.title - tv_genres.name
+- Results must be sorted in ascending order by the show title and genre name
+- You can use only one SELECT statement
+- The database name will be passed as an argument of the mysql command
