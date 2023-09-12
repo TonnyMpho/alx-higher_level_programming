@@ -6,7 +6,7 @@ for (let i = 2; i < process.argv.length; i++) {
   integers.push(parseInt(process.argv[i]));
 }
 
-if (integers.length === 0 || integers.length === 1) {
+if (integers.length < 3) {
   console.log(0);
 } else {
   integers.sort();
