@@ -10,6 +10,5 @@ if (integers.length === 0 || integers.length === 1) {
   console.log(0);
 } else {
   integers.sort();
-  integers.reverse();
-  console.log(integers[1]);
+  console.log(integers[integers.length - 2]);
 }
