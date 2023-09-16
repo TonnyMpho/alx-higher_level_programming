@@ -17,7 +17,9 @@ def select_state(username, password, dbname, name):
             db=dbname)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = '{}'".format(name))
+    cur.execute(
+            "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC"
+            .format(name))
 
     rows = cur.fetchall()
     for row in rows:
