@@ -7,7 +7,11 @@ import MySQLdb
 import sys
 
 
-def list_states(username, paswword, dbname):
+if __name__ == '__main__':
+    username = sys.argv[1]
+    password = sys.argv[2]
+    dbname = sys.argv[3]
+
     db = MySQLdb.connect(
             host="localhost",
             user=username,
@@ -25,11 +29,3 @@ def list_states(username, paswword, dbname):
 
     cur.close()
     db.close()
-
-
-if __name__ == '__main__':
-    username = sys.argv[1]
-    password = sys.argv[2]
-    dbname = sys.argv[3]
-
-    list_states(username, password, dbname)
