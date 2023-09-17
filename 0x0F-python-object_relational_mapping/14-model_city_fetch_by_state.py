@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""script that deletes all State objects with a name
-containing the letter 'a' from the database
-"""
+"""script that prints all City objects from the database"""
 from model_state import Base, State
 from model_city import City
 from sqlalchemy import create_engine
