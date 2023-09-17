@@ -5,6 +5,7 @@ from model_state import Base
 
 
 class City(Base):
+    """ class inherits from Base """
     __tablename__ = "cities"
 
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
