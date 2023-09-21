@@ -81,9 +81,29 @@ $ python3
 
 ### Tasks
 
+- Code should not be executed when imported
+- MySQL server running on localhost at port 3306
+
+- Exception
+	- (no argument validation needed)
+
 0. Get all states 
 	- ##### script that lists all states from the database
 	- module MySQLdb (import MySQLdb)
-	- MySQL server running on localhost at port 3306
 	- sorted in ascending order by states.id
-	- code should not be executed when imported
+
+1. Filter states
+	- ##### script that lists all states with a name starting with N (upper N) from the database
+
+2. Filter states by user input
+	- ##### script that takes in an argument and displays all values in the states table where name matches the argument
+
+3. SQL Injection
+	- ##### cript that takes in arguments and displays all values in the states table where name matches the argument. But this time, one that is safe from MySQL injections!
+
+4. Cities by states
+	- ##### script that lists all cities from the database
+	- sorted in ascending order by cities.id
+
+5. All cities by state
+	- ##### script that takes in the name of a state as an argument and lists all cities of that state
