@@ -1,12 +1,12 @@
 ## Python - Object-relational mapping
 
-###### Databases and Python!
+##### Databases and Python!
 
 We are using the module __MySQLdb__ to connect to a __MySQL__ database and execute SQL queries.
 And we will use the module __SQLAlchemy__ an Object Relational Mapper (ORM).
 
 
-##### Object-relational Mappers (ORMs)
+#### Object-relational Mappers (ORMs)
 
 An object-relational mapper (ORM) is a code library that automates the transfer of data stored in relational database tables into objects that are more commonly used in application code.
 
@@ -41,7 +41,7 @@ session.close()
 - [SQLAlchemy ORM Tutorial for Python Developers](https://auth0.com/blog/sqlalchemy-orm-tutorial-for-python-developers/)
 - [Python Virtual Environments](https://realpython.com/python-virtual-environments-a-primer/)
 
-##### Install and activate venv
+#### Install and activate venv
 
 To create a Python Virtual Environment, allowing to install specific dependencies.
 ```
@@ -64,7 +64,7 @@ $ python3
 >>> MySQLdb.version_info 
 (2, 0, 3, 'final', 0)
 ```
-###### if having errors or trouble insatlling mysqlclient try:
+#### if having errors or trouble insatlling mysqlclient try:
 ```
 pip install --no-binary :all: mysqlclient
 python -c "import MySQLdb"
@@ -78,3 +78,12 @@ $ python3
 >>> sqlalchemy.__version__ 
 '1.4.22'
 ```
+
+### Tasks
+
+0. Get all states 
+	- ##### script that lists all states from the database
+	- module MySQLdb (import MySQLdb)
+	- MySQL server running on localhost at port 3306
+	- sorted in ascending order by states.id
+	- code should not be executed when imported
