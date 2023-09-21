@@ -66,8 +66,8 @@ $ python3
 ```
 #### if having errors or trouble insatlling mysqlclient try:
 ```
-pip install --no-binary :all: mysqlclient
-python -c "import MySQLdb"
+$ sudo pip install --no-binary :all: mysqlclient
+$ python -c "import MySQLdb"
 ```
 #### Install SQLAlchemy
 ```
