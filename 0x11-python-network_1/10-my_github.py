@@ -17,6 +17,6 @@ if __name__ == "__main__":
 
     if res.status_code == 200:
         user = res.json()
-        print(user['id'])
+        print(user.get('id'))
     else:
         print("None")

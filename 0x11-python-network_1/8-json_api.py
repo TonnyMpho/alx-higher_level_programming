@@ -21,7 +21,7 @@ if __name__ == "__main__":
         res = res.json()
 
         if res:
-            print("[{}] {}".format(res['id'], res['name']))
+            print("[{}] {}".format(res.get('id'), res.get('name')))
         else:
             print("No result")
     except Exception:
