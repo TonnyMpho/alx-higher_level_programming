@@ -14,15 +14,15 @@
 
 ### Tasks
 
-0. cURL body size
+0. ### cURL body size
 
 - #### Bash script that takes in a URL, sends a request to that URL, and displays the size of the body of the response
 
-- The size must be displayed in bytes
-- have to use `curl`
+	- The size must be displayed in bytes
+	- have to use `curl`
 
     
-1. cURL to the end
+1. ### cURL to the end
 
 - #### Bash script that takes in a URL, sends a `GET` request to the URL, and displays the body of the response
 
