@@ -11,9 +11,13 @@ request(url, (error, res, body) => {
     console.log(error);
   } else {
     const movies = JSON.parse(body);
-    const count = movies.results.filter((movie) => {
-      return movie.characters.includes(character);
+    let count = 0;
+
+    movies.results.forEach(movie => {
+      if (movie.characters.includes(character)) {
+        count++;
+      }
     });
-    console.log(count.length);
+    console.log(count);
   }
 });
