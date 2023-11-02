@@ -2,6 +2,6 @@
 // element when the user clicks on the tag DIV#toggle_header:
 $(document).ready(function() {
 	$('DIV#toggle_header').click(() => {
-		$('header').toggleClass('red green'),
+		$('header').toggleClass('red green');
 	});
 });
